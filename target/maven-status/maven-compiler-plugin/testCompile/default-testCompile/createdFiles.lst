@@ -1,0 +1,4 @@
+pages\RegistrationPage.class
+utilities\ConfigDataClass.class
+pages\BaseClass.class
+pages\LoginPage.class
