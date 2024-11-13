@@ -16,6 +16,8 @@ public class HomePage extends BaseClass{
 	@FindBy(xpath = " //a[contains(text(),'Logged in as')]")
 	WebElement Logged;
 	
+	
+	
 	public String Currently_Logged() {
 		return Logged.getText();
 	}

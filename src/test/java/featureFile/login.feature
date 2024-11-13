@@ -29,3 +29,25 @@ Feature: Login with valid credentials
     Examples: 
       | userId         | password  | message           |
       | rozi@gmail.com | rozi@1234 | Logged in as Rozi |
+
+  @tag1
+  Scenario Outline: Login to the Automation Exercise with invalid credentials
+    Given I landed on Login page
+    When Logged in the username "<userId>" and pasword "<password>"
+    And clicks the login button
+    Then Error "<message>" is displayed
+
+    Examples: 
+      | userId         | password | message                              |
+      | rozi@gmail.com |  1234567 | Your email or password is incorrect! |
+
+  @tag2
+  Scenario Outline: New User signUp with Name and Email
+    Given I landed on Login page
+    When Enter user  "<name>" and email "<email>"
+    And clicks the signUp button
+    Then The user should enter in SignUp page "<message>" is displayed
+
+    Examples: 
+      | name | email       | message                   |
+      | Sam  | ropee@gmail.com | Enter Account Information |
